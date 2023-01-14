@@ -1,4 +1,4 @@
-import data from './test.json' assert { type: 'json' };
+import data from '../json/nobelprize.json' assert { type: 'json' };
 const output = document.getElementById("output");
 
 let html = "";
