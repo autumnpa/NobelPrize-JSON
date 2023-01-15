@@ -1,0 +1,8 @@
+.category {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    min-width: 252px;
+    margin: 3px;
+}
