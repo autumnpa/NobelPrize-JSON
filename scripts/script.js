@@ -11,6 +11,9 @@ for (let i = 0; i < data.prizes.length; i++) {
     <h1>
     ${data.prizes[i].year} - ${data.prizes[i].category}
     </h1>
+    <div class = "laureates">
+    ${data.prizes[i].laureates}
+    </div>
     </div>
     `
 }
