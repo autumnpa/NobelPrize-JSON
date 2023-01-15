@@ -3,6 +3,15 @@
     border-radius: 10px;
     padding: 10px;
     display: inline-block;
+    /* min-width: px; */
+    margin: 3px;
+}
+
+.laureates {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
     min-width: 252px;
     margin: 3px;
 }
