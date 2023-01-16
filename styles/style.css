@@ -89,3 +89,23 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+/* Hover overlap colour */
+.card.colour .additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+/* Hovers full width of card for new info */
+.card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+/* On hover slide additional laureate info over */
+.card .additional .more-info {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+}
