@@ -48,3 +48,44 @@ body {
     right: 1rem;
     font-size: 0.9em;
 }
+
+/* Laureate info */
+.card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    transition: width 0.4s;
+    overflow: hidden;
+}
+
+/* Text colour for additional info on hover */
+.card.colour .more-info {
+    color: #224C36;
+}
+
+.card.colour .stats {
+    color: #325C46;
+}
+
+/* Laureate stat objects */
+.stats>div {
+    flex: 1;
+    text-align: center;
+}
+
+/* Stat objects layout */
+.stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+/* Laureate stats title */
+.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
