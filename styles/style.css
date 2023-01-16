@@ -61,6 +61,7 @@ body {
 
 .card.colour .stats {
     color: #325C46;
+    font-size: 2rem;
 }
 
 /* Laureate stat objects */
@@ -104,4 +105,14 @@ body {
     position: absolute;
     left: 150px;
     height: 100%;
+}
+
+/* Font styling for main card*/
+
+.large {
+    font-size: 2rem;
+}
+
+.small {
+    font-size: 1rem;
 }

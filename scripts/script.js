@@ -22,14 +22,15 @@ for (let i = 0; i < data.prizes.length; i++) {
             <div class="center">
                 <div class="card colour">
                     <div class="general">
-                        <p>${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
+                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
                         </p>
-                        <p>${data.prizes[i].laureates[j].motivation}</p>
+                        <h3 class = "small">Motivation</h3>
+                        <p class = "small">${data.prizes[i].laureates[j].motivation}</p>
                         <span class="more">More info +</span>
                     </div>
                     <div class="additional">
                         <div class="more-info">
-                        <p>${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
+                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
                         </p>
                             <div class="stats">
                                 <div>
