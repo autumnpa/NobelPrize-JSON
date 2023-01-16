@@ -14,9 +14,8 @@ for (let i = 0; i < data.prizes.length; i++) {
     <h1>
     ${data.prizes[i].year} - ${data.prizes[i].category} - `
 
-    if (data.prizes[i].laureates === undefined) {
+    if (data.prizes[i].laureates !== undefined) {
         // Object is undefined
-    } else {
         for (let j = 0; j < data.prizes[i].laureates.length; j++) {
 
             html += `${data.prizes[i].laureates[j].firstname} - `
