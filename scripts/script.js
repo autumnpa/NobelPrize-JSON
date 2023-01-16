@@ -5,24 +5,29 @@ const laureates = data.prizes[2].laureates;
 console.log(laureates);
 
 let html = "";
-// Maybe change this into a table for better formatting?
+
+// Calculate stuff here
+
 for (let i = 0; i < data.prizes.length; i++) {
     // html += `<p>${data.prizes[i].year}: ${data.prizes[i].category}</p>`;
     // console.log(data.prizes[i].laureates);
     html += `
     <div class = "category">
     <h1>
-    ${data.prizes[i].year} - ${data.prizes[i].category}</h1> `
+    ${data.prizes[i].year} - ${data.prizes[i].category}</h1> 
+    </div>`
+
 
     if (data.prizes[i].laureates !== undefined) {
         // Object is undefined
+
         for (let j = 0; j < data.prizes[i].laureates.length; j++) {
 
             html += `
             <div class="center">
                 <div class="card colour">
                     <div class="general">
-                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
+                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
                         </p>
                         <h3 class = "small">Motivation</h3>
                         <p class = "small">${data.prizes[i].laureates[j].motivation}</p>
@@ -30,7 +35,7 @@ for (let i = 0; i < data.prizes.length; i++) {
                     </div>
                     <div class="additional">
                         <div class="more-info">
-                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${data.prizes[i].laureates[j].surname}
+                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
                         </p>
                             <div class="stats">
                                 <div>
