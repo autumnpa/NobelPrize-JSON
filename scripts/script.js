@@ -12,7 +12,7 @@ for (let i = 0; i < data.prizes.length; i++) {
     html += `
     <div class = "category">
     <h1>
-    ${data.prizes[i].year} - ${data.prizes[i].category} - `
+    ${data.prizes[i].year} - ${data.prizes[i].category}</h1> `
 
     if (data.prizes[i].laureates !== undefined) {
         // Object is undefined
@@ -49,15 +49,4 @@ for (let i = 0; i < data.prizes.length; i++) {
     }
 
 }
-
-// for (let i = 0; i < data.laureates.length; i++) {
-
-//     html += `
-// <div class = "category">
-// <div class = "laureates">
-// ${data.laureates[i].firstname}
-// </div>
-// </div>
-// `
-// }
 output.innerHTML = html;
