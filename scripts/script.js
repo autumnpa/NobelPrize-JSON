@@ -2,11 +2,21 @@ import data from '../json/nobelprize.json' assert { type: 'json' };
 const output = document.getElementById("output");
 
 const laureates = data.prizes[2].laureates;
-console.log(laureates);
 
 let html = "";
 
 // Calculate stuff here
+// Variables to hold the data collected in the loop
+let totalLaurs = 0;
+
+for (var _ in data.prizes) totalLaurs++;
+console.log(totalLaurs);
+
+// for (let i = 0; i < data.prizes.length; i++) {
+//     totalLaurs += data.prizes[i].laureates;
+// }
+// console.log(totalLaurs);
+
 
 for (let i = 0; i < data.prizes.length; i++) {
     // html += `<p>${data.prizes[i].year}: ${data.prizes[i].category}</p>`;
@@ -27,7 +37,7 @@ for (let i = 0; i < data.prizes.length; i++) {
             <div class="center">
                 <div class="card colour">
                     <div class="general">
-                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
+                        <p class = "large">${(data.prizes[i].laureates[j].firstname) ? data.prizes[i].laureates[j].firstname : ""} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
                         </p>
                         <h3 class = "small">Motivation</h3>
                         <p class = "small">${data.prizes[i].laureates[j].motivation}</p>
@@ -35,7 +45,7 @@ for (let i = 0; i < data.prizes.length; i++) {
                     </div>
                     <div class="additional">
                         <div class="more-info">
-                        <p class = "large">${data.prizes[i].laureates[j].firstname} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
+                        <p class = "large">${(data.prizes[i].laureates[j].firstname) ? data.prizes[i].laureates[j].firstname : ""} ${(data.prizes[i].laureates[j].surname) ? data.prizes[i].laureates[j].surname : ""}
                         </p>
                             <div class="stats">
                                 <div>
