@@ -1,25 +1,26 @@
 import data from '../json/nobelprize.json' assert { type: 'json' };
 const output = document.getElementById("output");
-
-// const laureates = data.prizes[2].laureates;
+console.log("////////");
 
 let html = "";
 
 // Calculate stuff here
 // Variables to hold the data collected in the loop
 
-// for (let i = 0; i < data.prizes.length; i++) {
-//     html += `
-//     <div>
-//     <h1>
-//     ${data.prizes[i].year} - ${data.prizes[i].category}</h1> 
-//     </div>`
-// }
+let totalLaurs = {};
+
+for (let i = 0; i < data.prizes.length; i++) {
+    let prize = data.prizes[i];
+    if (totalLaurs[prize.year] && prize.laureates) {
+        totalLaurs[prize.year] += prize.laureates.length;
+    } else if (prize.laureates) {
+        totalLaurs[data.prizes[i].year] = prize.laureates.length;
+    }
+    console.log(data.prizes[i].year);
+}
 
 // This gives me total number of laureates but HOW can I get the total number PER YEAR?!
-let totalLaurs = 0;
 
-for (var _ in data.prizes[0].laureates) totalLaurs++;
 console.log(totalLaurs);
 
 for (let i = 0; i < data.prizes.length; i++) {
