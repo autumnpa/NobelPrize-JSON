@@ -7,6 +7,7 @@ let html = "";
 // Calculate stuff here
 // Variables to hold the data collected in the loop
 
+// Calculates the numbers
 let totalLaurs = {};
 
 for (let i = 0; i < data.prizes.length; i++) {
@@ -16,11 +17,20 @@ for (let i = 0; i < data.prizes.length; i++) {
     } else if (prize.laureates) {
         totalLaurs[data.prizes[i].year] = prize.laureates.length;
     }
-    console.log(data.prizes[i].year);
+    // console.log(data.prizes[i].year);
 }
 
-// This gives me total number of laureates but HOW can I get the total number PER YEAR?!
+// Find which year has most/least laureates
 
+let keys = Object.keys(totalLaurs);
+let arr = Object.values(totalLaurs);
+let least = Math.min(...arr);
+let most = Math.max(...arr);
+
+console.log(`${least} has the least Laureates, 
+${most} has the most Laureates`);
+
+// This gives me total number of laureates but HOW can I get the total number PER YEAR?!
 console.log(totalLaurs);
 
 for (let i = 0; i < data.prizes.length; i++) {
