@@ -1,6 +1,5 @@
 import data from '../json/nobelprize.json' assert { type: 'json' };
 const output = document.getElementById("output");
-console.log("////////");
 
 let html = "";
 
@@ -27,8 +26,13 @@ let arr = Object.values(totalLaurs);
 let least = Math.min(...arr);
 let most = Math.max(...arr);
 
-console.log(`The least laureates per year is ${least}. 
-The most laureates per year is ${most}.`);
+html += `
+<div class="data-card">
+  <p class="data-card-title">The least laureates per year is ${least}.</p>
+  <p>The most laureates per year is ${most}.</p>
+</div>
+`
+
 
 // This gives me total number of laureates but HOW can I get the total number PER YEAR?!
 console.log(totalLaurs);
