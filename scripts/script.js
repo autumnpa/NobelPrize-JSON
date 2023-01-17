@@ -27,8 +27,8 @@ let arr = Object.values(totalLaurs);
 let least = Math.min(...arr);
 let most = Math.max(...arr);
 
-console.log(`${least} has the least Laureates, 
-${most} has the most Laureates`);
+console.log(`The least laureates per year is ${least}. 
+The most laureates per year is ${most}.`);
 
 // This gives me total number of laureates but HOW can I get the total number PER YEAR?!
 console.log(totalLaurs);
