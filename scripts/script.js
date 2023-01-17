@@ -1,31 +1,35 @@
 import data from '../json/nobelprize.json' assert { type: 'json' };
 const output = document.getElementById("output");
 
-const laureates = data.prizes[2].laureates;
+// const laureates = data.prizes[2].laureates;
 
 let html = "";
 
 // Calculate stuff here
 // Variables to hold the data collected in the loop
-let totalLaurs = 0;
-
-for (var _ in data.prizes) totalLaurs++;
-console.log(totalLaurs);
 
 // for (let i = 0; i < data.prizes.length; i++) {
-//     totalLaurs += data.prizes[i].laureates;
+//     html += `
+//     <div>
+//     <h1>
+//     ${data.prizes[i].year} - ${data.prizes[i].category}</h1> 
+//     </div>`
 // }
-// console.log(totalLaurs);
 
+// This gives me total number of laureates but HOW can I get the total number PER YEAR?!
+let totalLaurs = 0;
+
+for (var _ in data.prizes[0].laureates) totalLaurs++;
+console.log(totalLaurs);
 
 for (let i = 0; i < data.prizes.length; i++) {
-    // html += `<p>${data.prizes[i].year}: ${data.prizes[i].category}</p>`;
-    // console.log(data.prizes[i].laureates);
     html += `
-    <div class = "category">
-    <h1>
-    ${data.prizes[i].year} - ${data.prizes[i].category}</h1> 
-    </div>`
+    <div class="category">
+        <h1>${data.prizes[i].category}
+            <span>${data.prizes[i].year}</span>
+         </h1>
+    </div>
+    `
 
 
     if (data.prizes[i].laureates !== undefined) {

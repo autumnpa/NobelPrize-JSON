@@ -1,7 +1,25 @@
 html,
 body {
-    background: #FCEEB5;
-    font-family: Abel, Arial, Verdana, sans-serif;
+    background: #fefae0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.category h1 {
+    width: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 3rem;
+    color: #224C36;
+}
+
+/* Font styling for main card*/
+
+.large {
+    font-size: 2rem;
+}
+
+.small {
+    font-size: 1rem;
 }
 
 /* Card position */
