@@ -17,7 +17,15 @@ for (let i = 0; i < data.prizes.length; i++) {
         totalLaurs[data.prizes[i].year] = prize.laureates.length;
     }
     // console.log(data.prizes[i].year);
+
 }
+
+// let earliestYear = {}
+// for (i = 2022; i >= data.prizes[i].year; i++) {
+//     if (earliestYear < data.prizes[i].year.length)
+//         earliestYear += earliestYear;
+//     console.log(earliestYear);
+// }
 
 // Find which year has most/least laureates
 
